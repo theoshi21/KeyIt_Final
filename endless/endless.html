@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=yes">
+		<link rel="stylesheet" href="endless.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+		<title> KEY IT | App Dev Application</title>
+</head>
+
+<body>
+	<div id="gameoverBody">
+		<div class="black">	
+			<div class="gameover">
+				<h1 class="gameoverText"> 
+				<span class="game">GAME</span> 
+  <br> 	
+				<span class="over">OVER</span> 
+				</h1>
+
+		<div class="scoreEnd" id="highscore">Highscore: 0000</div>
+		<div class="scoreEnd" id="score">Score: 0000</div>
+
+			<h4 class="pAgain">
+				Play Again?
+			</h4>
+
+		<div id="gameOverButton">
+		<div id="gameButton"> <!--pamodify na lang kelvin-->
+		<div id="yes" onclick="restartGame()"> <h1> YES </h1> </div>
+
+		<div id="no" onclick="no()"><h1>NO</h1> </div>
+		</div>
+		</div>
+
+
+			</div>
+		</div>
+	</div>
+
+	<div class="gameScreen">
+		<div class="gameHeader">
+			<div class="leftContent">
+					<div class="level" id="levelDisp"> Level 1 </div>
+			</div>
+			<div class="centerContent">
+					<div class="mode"> ENDLESS <img src="skull.png" alt="life" class="skull"></div>
+			</div>
+			<div class="rightContent">
+				<div class="score" id="scoreDisp">Score: 0000</div>
+			</div>
+		</div>
+		
+		<div id="category"> <h1 id="announce"> </h1> </div>
+		<div id="gameBody">
+					<div id="time"><p id="countdown"></p></div>
+			<div id="btnContainer">
+				<div id="playBtn" onclick="playCategoryAnimation(); startEndless()"><h1>PLAY</h1></div>
+				<audio id="myAudio" autoplay loop>  <source src="../audios/endlessBG.mp3" type="audio/mpeg">
+			</div>
+			<div id="object"></div>
+			<div id="arrowContainer"><div id="arrow"></div> </div>
+			
+			<div id="typingContainer">
+				<div id="wordDisp"> </div>
+			</div>
+		</div>
+
+	</div>
+	<div id="overlay-container">
+	<img id="gif-overlay" src="fire.gif" alt="GIF overlay">
+	</div>
+	<div id="footer"></div>
+	
+</body>
+
+<script type="text/javascript" src="endless.js"> </script>
+</html>

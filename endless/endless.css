@@ -1,0 +1,467 @@
+html{
+    height:100%;
+  }
+  
+  body{
+    background-image: url("endless.png");
+    background-size: cover;
+	overflow: hidden;
+  }
+  
+
+  .skull{
+    height: 3vh;
+    width: 2.5vh;
+  }
+  
+  #footer{
+    position: absolute;
+    background: url(redFooter.png);
+    background-size: cover;
+    width: 100%;
+    height: 8%;
+    top: 92%;
+    right: 0px;
+    }
+  
+  #gif-overlay{
+    position: absolute;
+
+    
+    width: 100%;
+    height: 80%;
+    top: 20%;
+    right: 0px;
+    z-index: 50;
+	user-select: none; /* Prevent text selection */
+   -webkit-user-drag: none; /* Prevent dragging on WebKit browsers (Chrome, Safari, etc.) */
+
+	 
+  }
+  .gameScreen{
+    width: 75vw;
+    height: 75vh;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 1vh solid red;
+    background-color: black;
+    border-radius: 2vw;
+    caret-color: transparent;
+  }
+
+  .gameHeader{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    justify-content: flex-start;
+    caret-color: transparent;
+  }
+  
+  .leftContent,
+  .centerContent,
+  .rightContent {
+      flex: 1;
+      display: flex;
+      margin: 0 8%;
+  }
+  
+  .level, .score {
+    color: white;
+    font-family: "Press Start 2P";
+    font-size: 1vw;
+    margin-top: 1vh;
+  }
+  
+  .mode {
+    color: red;
+    font-family: "Press Start 2P";
+    font-size: 1.25vw;
+    margin-top: 1vh;
+    align-items: center;
+    text-shadow: -0.09em -0.09em 0 white,  
+    0.09em -0.09em 0 white,
+    -0.09em 0.09em 0 white,
+    0.09em 0.09em 0 white;
+  }
+
+  #gameBody{
+    width: 98%;
+    height: 88%;
+    color: white;
+    display: flex;
+    margin-top: -1%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #typingContainer{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  #btnContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #playBtn h1{
+    margin: 0;
+    font-size: 4vh;
+}
+
+  #playBtn{
+	z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Press start 2P";
+    color: var(--textColor);
+    background: url(../playButton.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 18vw;
+    height: 5.5vw;
+    caret-color: transparent;
+    cursor: pointer;
+  }
+
+  #playBtn:hover{
+    background: url(../playClicked.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 18vw;
+    height: 5.5vw;
+  }
+
+  #restartBtn{
+	z-index: 99;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-family: "Press start 2P";
+    color: var(--textColor);
+    background: url(../playButton.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 18vw;
+    height: 5.5vw;
+    caret-color: transparent;
+    cursor: pointer;
+  }
+
+  #restartBtn:hover{
+    background: url(../playClicked.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 18vw;
+    height: 5.5vw;
+  }
+
+  #object{
+    position: relative;
+    height: 10px;
+    width: 10px;
+    z-index: 99;
+  }
+
+  #starImg{
+    width: 100%;
+    height: 100%;
+    background: url(../resources/star.png);
+    background-size: cover;
+    border: 0px;
+    cursor: pointer;
+    caret-color: transparent;
+  }
+
+  #starImg:hover{
+    background: url(../resources/starClicked.png);
+    background-size:cover;
+    text-decoration: none;
+  }
+
+  /*CSS FOR TYPING GAME*/
+  #wordDisp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2vh; 
+    font-family: "Press Start 2P", sans-serif; 
+    color: white; 
+    font-size: 5vw;
+    height: 10vw;
+}
+
+#userInput {
+    width: 20vw;
+    height: 5vh;
+    padding: 1vh;
+    text-align: center;
+    font-size: 3vw;
+    font-family: "Press Start 2P", sans-serif;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 1vw;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
+}
+    
+#userInput::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#userInput:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/*CSS FOR ARROW GAMES */
+.arrowImage {
+  position: absolute;
+  z-index: 2;
+  top: 40%;
+  left: 45%;
+  width: 10vw;
+  height: 10vw; 
+}
+
+/*CSS FOR TIME*/
+#time{
+  display: inline-flex;
+  position: absolute;
+  color: rgb(94, 9, 20);
+  font-family: "press start 2p";
+  width: 6vw;
+  height: 11vh;
+  background: url(../resources/clock.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+
+}
+
+#countdown{
+  width: 100%;
+  display: flex;
+  font-family: "press start 2p";
+  color: rgb(94, 9, 20);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+  
+  #category {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-top: 40%;
+  /* Adjust vertical position */
+  margin-left: auto;
+  margin-right: auto;
+  height: 10vh;
+  width: 60vw;
+  z-index: 99;
+  text-align: center;
+
+
+  
+}
+
+
+@keyframes textAnimation {
+  0%{ transform: translateY(100%);  opacity: 0;  } 
+  50% { transform: translateY(0);  opacity: 1; }
+ 100%  { transform: translateY(100%); opacity: 0;;} 
+}	
+
+#category h1.text-animation {
+  font-family: "Press start 2P";
+  font-size: 10vh;
+color: white;
+    opacity:0;
+    animation: textAnimation 1s ease-in;
+
+}
+
+/* Game over screen */
+.black {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 98; 
+}
+
+
+.gameover {
+border: solid white;
+position: absolute;
+transform:translate(2%, 5%);
+ background: url('../resources/gameover.jpg');
+ background-size:cover;
+background-repeat: no-repeat;
+ width: 95%;
+height: 90%;
+font-family: "Press start 2P";
+z-index: 99;
+}
+
+
+.gameoverText {
+margin-top: 3%;
+}
+
+.game, .over {
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;
+text-shadow: 10px 10px 0 #A4620B;
+}
+
+
+.scoreEnd{
+color: white;
+user-select:none;
+font-size: 15px;	
+margin-top: 1.5%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.game {
+font-size: 180px;
+opacity: 0; 
+animation: slideIn 1s ease-out forwards, blink 0.5s 1.5s infinite;
+}
+
+.over {
+font-size: 100px;
+opacity: 0; 
+animation: dropIn 1s 0.5s ease-out forwards, blink 0.5s 2s infinite;
+}
+
+@keyframes slideIn {
+0% {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+100% {
+  transform: translateX(0);
+  opacity: 1;
+}
+}
+
+@keyframes dropIn {
+0% {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+100% {
+  transform: translateY(0);
+  opacity: 1;
+}
+}
+
+@keyframes blink {
+0%, 100% {
+  opacity: 1;
+}
+50% {
+  opacity: 0;
+}
+}
+
+.pAgain{
+color: white;
+font-size: 35px;	
+margin-top: 2%;
+display: flex;
+justify-content: center;
+align-items: center;
+ text-shadow: 2px 2px 0 #F1D28F;
+}
+
+#yes, #no {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--textColor);
+  background: url(../resources/yesno.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: auto; 
+font-size:12px;
+  padding: 5px; 
+  margin: 0px; 
+  transition: transform 0.2s ease-in-out;
+}
+
+#yes {
+width: 20vw;
+  height: 10vh;
+  background-position: center; 
+}
+
+#yes:hover{
+
+  cursor: pointer;
+  transform: scale(1.2);
+
+}
+
+
+#no {
+width: 20vw;
+  height: 10vh;
+  background-position: center; 
+}
+
+
+#no:hover{
+
+  cursor: pointer;
+  transform: scale(1.2);
+
+}
+
+#gameOverButton{
+  display: flex; 
+  justify-content: space-between;
+  width: 80%;
+  height: 5%;
+ margin: 0 auto;
+
+  z-index: 99;
+}
+
+#gameButton {
+  display: flex;
+  justify-content: space-between; 
+  width: 100%;
+  height: 100%;
+}
+
+#gameoverBody { /*this is the ano kelvin, to display the kineme*/
+display:none;
+}
+  
+      
