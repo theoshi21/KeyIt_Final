@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=yes">
+	<link rel="stylesheet" href="index.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+	<title> KEY IT | App Dev Application</title>
+</head>
+
+<body>
+
+
+
+
+
+  <img id="stars" src="starry.gif" alt="GIF overlay">
+	<div class="title" id="key">
+	<span style="--i:1">K</span>
+   <span style="--i:2">E</span>
+   <span style="--i:3">Y</span>
+  
+
+    </div>
+	<div class="title" id="it">
+		 <span style="--i:4">I</span>
+   <span style="--i:5">T</span>
+    <span style="--i:6">!</span>
+    </div>
+
+	<div id="footer">
+		
+		<h1 class="h2p"> HOW TO PLAY? </h1>
+	<div class="instructions-cont">
+	
+	<div class="instructions">
+		<p>KEY-IT: Get Ready to Test Your Skills!</p>
+		<p>Key-IT is a fast-paced game that challenges your <br> reflexes, typing skills, and coordination. Do you have what it takes?</p>
+
+		<p>Choose Your Difficulty</p>
+	<ul>
+		<li>Mercy Mode: Get 3 lives to conquer increasingly challenging rounds.<br> Make a mistake? No worries, you get two more chances!</li>
+		<br>
+		<li>Endless Mode: Push your limits! One wrong move and it's game over,<br> but the faster you progress, the faster the game gets!</li>
+	</ul>
+
+		<p>Challenge Categories</p>
+	<ul>
+		<li>Click IT: Stars will appear on the screen. Test your reflexes <br>by clicking on them before the timer runs out!</li>
+		<br>
+		<li>Type IT: Words will flash on the screen. Can you type them correctly <br>before the timer expires?</li>
+		<br>
+	<li>Key IT: Look closely! An image of an arrow key pops up. Match the image <br> by pressing  the corresponding arrow key <br>on your keyboard. 
+	Is it up, down, left, or right?</li>
+	</ul>
+
+	<p>Stay Alert: A timer counts down for each category. <br>Running out of time costs a life, so be quick!</p>
+
+	</div>
+
+	</div>
+	</div>
+	
+	<center>
+	<div id="buttonContainer">
+	
+		<div id="startButton"> 
+			<div id="start" onclick="start()"><h1>START</h1></div>
+			<audio id="myAudio" autoplay loop>  <source src="audios/floatingalso.mp3" type="audio/mpeg">
+		</div>
+		<div id="gameButton">
+		<div id="mercy" onclick="mercy()"> <h1> MERCY </h1> </div>
+
+		<div id="endless" onclick="endless()"><h1>ENDLESS</h1> </div>
+		</div>
+	</div>
+	</center>
+	
+</body>
+
+
+<script type="text/javascript" src="index.js"> </script>
+
+</html>

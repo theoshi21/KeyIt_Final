@@ -1,0 +1,244 @@
+:root{
+    --primaryColor: #4F2770;
+    --secondaryColor: #efe9e7;
+    --textColor: #fff;
+}
+
+body{
+    background-color: #4F2770;  
+	 overflow: auto;
+	 margin:0;
+}
+
+
+
+ #stars{
+    position: absolute;
+    width: 100%;
+    right: 0px;
+	top: -15%;
+	z-index: -99;
+	user-select: none; /* Prevent text selection */
+   -webkit-user-drag: none; /* Prevent dragging on WebKit browsers (Chrome, Safari, etc.) */
+
+  }
+
+#playButton {
+  background-color: #008CBA; /* Play button color */
+  color: white; /* Play button text color */
+  padding: 10px 20px; /* Play button padding */
+  border: none;
+  cursor: pointer; /* Indicate clickable button */
+}
+
+#playButton.muted { /* Styles for mute state */
+  background-color: #ccc; /* Change color when muted */
+}
+
+.title{
+    display: flex;
+    margin-top: 5vh;
+    justify-content: center;
+    font-size: 25vh;
+    font-family: "Press Start 2P";	
+	color: red;
+    text-shadow: -0.03em -0.03em 0 white,  
+    0.03em -0.03em 0 white,
+    -0.03em 0.03em 0 white,
+    0.03em 0.03em 0 white;
+	color:#4F2770;
+
+}
+
+.title span{
+
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  animation: bounce 1.5s infinite;
+  animation-delay: calc(.1s * var(--i));
+
+	
+}
+
+@keyframes bounce{
+ 0%, 40%, 100% {
+        transform: translateY(0);
+        color: #4F2770;
+    }
+    20% {
+        transform: translateY(-20px);
+        color: #9c8cb4;  
+    }
+} 
+
+
+#footer {
+    position: absolute; 
+    background: url('footer2.png') no-repeat center center; 
+    background-size: cover; 
+    width: 100%; 
+	margin-top: 15%;
+    height: auto; 
+    min-height: 100vh;
+    overflow: auto; 
+    left: 0; 
+}
+
+h1.h2p{
+	 display: flex;
+    justify-content: center;
+    align-items: center;
+	margin-top: 5%;
+	font-size: 10vh;
+	color:white;
+	font-family: "Press Start 2P";	
+	text-shadow: 5px 5px 0 #2E1B5B;
+	user-select: none;
+
+
+}
+
+
+.instructions-cont {
+	list-style-type: circle;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; 
+    transform: translateY(20px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.instructions {
+    color: white;
+    font-size: 2.2vh;
+    text-shadow: 3px 2px 5px #2E1B5B;
+    font-family: "Press Start 2P";
+    user-select: none;
+}
+
+#buttonContainer{
+    width: 50%;
+    height: 25%;
+    margin-top: 5vh;
+	z-index:99;
+}
+
+#startButton{
+	width: 32%;
+    height: 100%;
+	border-radius: 40%;
+	z-index:99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	animation: glow 2.5s infinite;
+	
+}
+ @keyframes  glow {
+  0% {
+   	box-shadow: 0 0 40px 15px pink;
+  }
+  50% {
+    box-shadow: none;
+  }
+  100% {
+   box-shadow: 0 0 40px 15px pink;
+  }
+}
+#gameButton{
+    display: none;
+}
+
+
+
+
+#start{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Press start 2P";
+    color: var(--textColor);
+    background: url(startButton.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 17vw;
+    height: 10vh;
+}
+
+#start:hover{
+    background: url(startClicked.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 17vw;
+    height: 10vh;
+    cursor: pointer;
+}
+
+
+#mercy{
+    display: flex;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    font-family: "Press start 2P";
+    color: var(--textColor);
+    background: url(mercyButton.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 17vw;
+    height: 10vh;
+    vertical-align: center;
+	  transition: transform 0.2s ease-in-out;
+}
+#mercy:hover{
+    background: url(mercyClicked.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 17vw;
+    height: 10vh;
+    color: var(--primaryColor);
+    cursor: pointer;
+	  transform: scale(1.2);
+
+}
+
+#endless{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    font-family: "Press start 2P";
+    color: var(--textColor);
+    background: url(endlessClicked.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 17vw;
+    height: 10vh;
+	transition: transform 0.2s ease-in-out;
+}
+#endless:hover{
+    background: url(endlessButton.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 17vw;
+    height: 10vh;
+    color: var(--primaryColor);
+    cursor: pointer;
+	transform: scale(1.2);
+
+}
+
+
+h1{
+    margin: 0;
+    font-size: 3vh;
+}
+
+
+
+
+
