@@ -154,8 +154,6 @@ h1.h2p{
 }
 
 
-
-
 #start{
     display: flex;
     justify-content: center;
@@ -164,6 +162,7 @@ h1.h2p{
     color: var(--textColor);
     background: url(startButton.png);
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     width: 17vw;
     height: 10vh;
@@ -173,6 +172,7 @@ h1.h2p{
     background: url(startClicked.png);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     width: 17vw;
     height: 10vh;
     cursor: pointer;
@@ -188,6 +188,7 @@ h1.h2p{
     color: var(--textColor);
     background: url(mercyButton.png);
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     width: 17vw;
     height: 10vh;
@@ -197,6 +198,7 @@ h1.h2p{
 #mercy:hover{
     background: url(mercyClicked.png);
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     width: 17vw;
     height: 10vh;
@@ -215,6 +217,7 @@ h1.h2p{
     color: var(--textColor);
     background: url(endlessClicked.png);
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     width: 17vw;
     height: 10vh;
@@ -224,6 +227,7 @@ h1.h2p{
     background: url(endlessButton.png);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     width: 17vw;
     height: 10vh;
     color: var(--primaryColor);

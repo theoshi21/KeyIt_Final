@@ -187,6 +187,10 @@ function no(){
     window.location.href = "../index.html";
 }
 
+function back(){
+    window.location.href = "../index.html";
+}
+
 //--- END OF STARTING GAME
 
 
