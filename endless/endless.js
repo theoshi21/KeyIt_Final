@@ -212,6 +212,7 @@ function objectSize(){
 }
 
 function mouseGame(){
+    msTimeConverted = initialTime * 1000;
     clickIT.play();
 	appearCategory("CLICK IT!")
     document.getElementById("object").innerHTML = "<div id='starImg' onclick='objectClick()'> </div>";
@@ -252,8 +253,9 @@ function objectClick(){
 //--- TYPING CATEGORY
 
 function typingGame() {
-        typeIT.play();
-	   appearCategory("TYPE IT!")
+    msTimeConverted = initialTime * 1000;
+    typeIT.play();
+	appearCategory("TYPE IT!")
     document.getElementById("typingContainer").style.display = "flex";
     let words = [
         "pear", "fig", "lime", "kiwi", "plum", 
@@ -370,6 +372,7 @@ var sequence = 4;
 
 var arrowTimeout;
 function arrowGame() {
+    msTimeConverted = initialTime * 1000;
     keyIT.play();
     appearCategory("KEY IT!")
     arrowRandomizer();
